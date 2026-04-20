@@ -12,10 +12,23 @@
         height: 100%;
         background: #fff;
       }
+      :root {
+        --scale: 0.85;
+      }
       body {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(2em * var(--scale));
+        text-align: center;
+        font-size: calc(clamp(16px, 1.3vw, 20px) * var(--scale));
+        line-height: 1.75;
       }
       img {
         max-width: 50vw;
@@ -24,9 +37,21 @@
         height: auto;
         aspect-ratio: 1 / 1;
       }
+      .title {
+        font-family: "Courier New", Courier, monospace;
+      }
     </style>
   </head>
   <body>
-    <img src="index.png" alt="">
+    <div class="container">
+      <div>
+        Kuromitsu Sazanami (黒光 漣)<br>
+        Mixed Mathematical Artist
+      </div>
+      <img src="index.png" alt="">
+      <div class="title">
+        <b>The Paynter at work on<br>THE JAZZ PROBLEM STATEMENT</b>
+      </div>
+    </div>
   </body>
 </html>
